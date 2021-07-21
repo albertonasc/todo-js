@@ -17,3 +17,10 @@ forAddTodo.addEventListener('submit', event => {
     }
     
 })
+
+todosContainer.addEventListener('click', event => {
+    const clickedElement = event.target
+    if (Array.from(clickedElement.classList).includes('delete')) {
+        clickedElement.parentElement.remove()
+    }
+})
